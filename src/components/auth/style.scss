@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  .form {
+    width: 80%;
+    .incitingText {
+      color: #1900D5;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}
