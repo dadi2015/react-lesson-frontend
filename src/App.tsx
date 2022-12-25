@@ -16,20 +16,20 @@ function App() {
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
                 <CssBaseline/>
-                <LayoutComponent>
                     <div className="App">
                         <Routes>
-                            <Route element={<PrivateRoute/>}>
-                                <Route path="/" element={<Home/>}/>
-                                <Route path="/watchlist" element={<WatchlistComponent />}/>
-                                <Route path="/news" element={<NewsComponent />}/>
-                                <Route path="/settings" element={<SettingsComponent />}/>
+                            <Route element={<LayoutComponent />}>
+                                <Route element={<PrivateRoute/>}>
+                                    <Route path="/" element={<Home/>}/>
+                                    <Route path="/watchlist" element={<WatchlistComponent />}/>
+                                    <Route path="/news" element={<NewsComponent />}/>
+                                    <Route path="/settings" element={<SettingsComponent />}/>
+                                </Route>
+                                <Route path="login" element={<AuthRootComponent/>}/>
+                                <Route path="register" element={<AuthRootComponent/>}/>
                             </Route>
-                            <Route path="login" element={<AuthRootComponent/>}/>
-                            <Route path="register" element={<AuthRootComponent/>}/>
                         </Routes>
                     </div>
-                </LayoutComponent>
             </ThemeProvider>
         </ColorModeContext.Provider>
     );
