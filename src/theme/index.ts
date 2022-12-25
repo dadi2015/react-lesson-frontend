@@ -16,7 +16,7 @@ export const tokens = (mode: string) => ({
             900: '#5C5C5C',
         },
         secondary: {
-            DEFAULT: '7C7C7C'
+            DEFAULT: '#7C7C7C'
         },
         black: {
             DEFAULT: '#000000',
@@ -37,7 +37,8 @@ export const tokens = (mode: string) => ({
         gray: {
             DEFAULT: '#3C3C3C'
         },
-        accentMain: '#0F0E0E'
+        accentMain: '#0F0E0E',
+        borderColor: '#3C3C3C'
     } : {
         white: {
             DEFAULT: '#FFFFFF',
@@ -49,7 +50,7 @@ export const tokens = (mode: string) => ({
             500: '#F7F7F7'
         },
         secondary: {
-            DEFAULT: '7C7C7C'
+            DEFAULT: '#7C7C7C'
         },
         black: {
             DEFAULT: '#000000',
@@ -66,7 +67,8 @@ export const tokens = (mode: string) => ({
         gray: {
             DEFAULT: '#3C3C3C'
         },
-        accentMain: 'F7F7F7'
+        accentMain: '#F7F7F7',
+        borderColor: '#D1D1D1'
     })
 })
 
