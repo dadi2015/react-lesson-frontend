@@ -16,11 +16,7 @@ const LoginPage: React.FC<IPropsLogin> = (props: IPropsLogin): JSX.Element => {
                 variant="outlined"
                 placeholder="Введите ваш email"
                 helperText={errors.email ? `${errors.email.message}` : ''}
-                {...register('email', {
-                    required: 'Это обязательное поле',
-                    pattern:
-                        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                })}
+                {...register('email')}
             />
             <TextField
                 error={!!errors.password}
@@ -30,10 +26,7 @@ const LoginPage: React.FC<IPropsLogin> = (props: IPropsLogin): JSX.Element => {
                 label="Password" variant="outlined"
                 placeholder="Введите ваш пароль"
                 helperText={errors.password ? `${errors.password.message}` : ''}
-                {...register('password', {
-                    required: 'Это обязательное поле',
-                    minLength: 6
-                })}
+                {...register('password')}
             />
             <Button type="submit" sx={{fontFamily:'Poppins', marginTop: 2, marginBottom: 2, width: '60%'}} variant="contained">Войти</Button>
             <Typography variant="body1" sx={{fontFamily: 'Poppins', }}>У вас нет аккаунта?<span className="incitingText" onClick={() => navigate('/register')}>Регистрация</span></Typography>
