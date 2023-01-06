@@ -33,6 +33,11 @@ export const useStyles = makeStyles((theme: Theme) => {
                         color: `${colors.white.DEFAULT} !important`
                     }
                 },
+            },
+            active: {
+                backgroundColor: '#1900D5 !important',
+                color: '#fff !important',
+                borderRadius: '4px !important',
             }
         }
     )
