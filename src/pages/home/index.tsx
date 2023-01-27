@@ -6,9 +6,11 @@ import { useStyles } from './styles'
 import AreaChart from '../../components/charts/area-chart'
 import TrendUp from '../../assets/images/chart/trend-up.svg'
 import TrendDown from '../../assets/images/chart/trend-down.svg'
+import LineChart from '../../components/charts/line-chart'
+import { IChartData } from '../../common/types/assets'
 
 const Home: FC = (): JSX.Element => {
-    const favoriteAssets: any[] = useAppSelector(
+    const favoriteAssets: IChartData[] = useAppSelector(
         (state) => state.assets.favoriteAssets,
     )
     const dispatch = useAppDispatch()
@@ -39,9 +41,6 @@ const Home: FC = (): JSX.Element => {
         const currentPrice = element.singleAsset.map(
             (element: any) => element.current_price,
         )
-        const currentCap = element.singleAsset.map(
-            (element: any) => element.market_cap,
-        )
         const changePrice = element.singleAsset.map(
             (element: any) => element.price_change_percentage_24h,
         )
@@ -71,7 +70,7 @@ const Home: FC = (): JSX.Element => {
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={6} lg={6}>
-                        <AreaChart data={element.data} />
+                        <AreaChart data={element.price_chart_data} />
                     </Grid>
                 </Grid>
             </Grid>
@@ -80,8 +79,13 @@ const Home: FC = (): JSX.Element => {
 
     return (
         <Box className={classes.root}>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className={classes.areaChart}>
                 {renderFavoriteBlock}
+            </Grid>
+            <Grid container className={classes.lineChartBlock}>
+                <Grid item xs={12} sm={12} lg={12}>
+                    {filteredArray.length && <LineChart data={filteredArray} />}
+                </Grid>
             </Grid>
         </Box>
     )
