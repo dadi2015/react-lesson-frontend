@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-const SettingsComponent = () => {
+const SettingsPage = () => {
     return (
         <div>
             <h1>Settings page</h1>
         </div>
-    );
-};
+    )
+}
 
-export default SettingsComponent;
+export default SettingsPage
