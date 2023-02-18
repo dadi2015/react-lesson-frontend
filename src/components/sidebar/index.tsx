@@ -101,7 +101,6 @@ const SidebarComponent: FC<ISidebarProps> = (
                                 </ListItem>
                             )}
                         </List>
-                        ,
                         <List className={classes.navList}>{renderNavMenu}</List>
                     </Box>
                     <Box width="100%">
