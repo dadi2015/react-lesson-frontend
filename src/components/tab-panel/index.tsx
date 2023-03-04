@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-import { TabPanelProps } from '../../common/types/tabs'
+import { ITabPanelProps } from '../../common/types/tabs'
 
-const TabPanel = (props: TabPanelProps) => {
+const TabPanel: FC<ITabPanelProps> = (props: ITabPanelProps) => {
     const { children, value, index, ...other } = props
 
     return (

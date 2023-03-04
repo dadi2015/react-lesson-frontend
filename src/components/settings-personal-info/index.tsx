@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { Box, Grid, TextField } from '@mui/material'
 import { useStyles } from './styles'
 import { useAppDispatch, useAppSelector } from '../../utils/hook'
 import AppLoadingButton from '../loading-button'
-import { updateUserInfo } from '../../store/thunks/auth'
+import { getPublicUser, updateUserInfo } from '../../store/thunks/auth'
 
-const SettingsPersonalInfoComponent = () => {
+const SettingsPersonalInfoComponent: FC = (): JSX.Element => {
     const dispatch = useAppDispatch()
     const classes = useStyles()
     const [name, setName] = useState('')
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
+
     const { user } = useAppSelector((state) => state.auth.user)
 
     useEffect(() => {
@@ -21,7 +22,7 @@ const SettingsPersonalInfoComponent = () => {
         }
     }, [user])
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault()
         const data = {
             firstName: name,
@@ -29,6 +30,7 @@ const SettingsPersonalInfoComponent = () => {
             email: email,
         }
         dispatch(updateUserInfo(data))
+        dispatch(getPublicUser())
     }
 
     return (

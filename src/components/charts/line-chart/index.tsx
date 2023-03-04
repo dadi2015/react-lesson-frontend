@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -23,7 +23,7 @@ ChartJS.register(
     Legend,
 )
 
-const LineChart = (props: ILineChartProps) => {
+const LineChart: FC<ILineChartProps> = (props: ILineChartProps) => {
     const { data } = props
 
     const options = {

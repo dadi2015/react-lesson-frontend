@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import { Box, Grid, TextField } from '@mui/material'
 import { useStyles } from '../settings-personal-info/styles'
 import AppLoadingButton from '../loading-button'
 import { useAppDispatch } from '../../utils/hook'
 import { updateUserPassword } from '../../store/thunks/auth'
 
-const ChangePasswordComponent = () => {
+const ChangePasswordComponent: FC = (): JSX.Element => {
     const [newPassword, setNewPassword] = useState('')
     const [oldPassword, setOldPassword] = useState('')
     const classes = useStyles()
     const dispatch = useAppDispatch()
 
-    const handleChangePassword = (e: any) => {
+    const handleChangePassword = (e: React.SyntheticEvent) => {
         e.preventDefault()
         const data = {
             oldPassword,

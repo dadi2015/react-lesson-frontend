@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Box from '@mui/material/Box'
@@ -13,7 +13,7 @@ import { getPublicUser } from '../../store/thunks/auth'
 import ChangePasswordComponent from '../../components/change-password'
 import DeleteUserComponent from '../../components/delete-user'
 
-const SettingsPage = () => {
+const SettingsPage: FC = (): JSX.Element => {
     const [value, setValue] = useState(0)
     const dispatch = useAppDispatch()
     const theme = useTheme()
