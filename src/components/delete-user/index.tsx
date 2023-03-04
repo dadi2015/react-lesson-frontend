@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import {
     Button,
     Checkbox,
@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAppDispatch } from '../../utils/hook'
 import { deleteUser } from '../../store/thunks/auth'
 
-const DeleteUserComponent = () => {
+const DeleteUserComponent: FC = (): JSX.Element => {
     const [checked, setChecked] = useState(false)
     const theme = useTheme()
     const colors = tokens(theme.palette.mode)
