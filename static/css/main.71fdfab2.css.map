@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.71fdfab2.css","mappings":"4FAEA,EAGI,qBAAsB,CAFtB,QAAS,CACT,SAEJ","sources":["index.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');\n\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n"],"names":[],"sourceRoot":""}

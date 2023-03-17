@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-lesson-frontend/static/css/main.71fdfab2.css",
+    "main.js": "/react-lesson-frontend/static/js/main.8de79511.js",
+    "static/js/787.cda612ba.chunk.js": "/react-lesson-frontend/static/js/787.cda612ba.chunk.js",
+    "static/media/logo.svg": "/react-lesson-frontend/static/media/logo.fde22df4b51150e99929cf517ae1935c.svg",
+    "static/media/trend-down.svg": "/react-lesson-frontend/static/media/trend-down.19f502453e59a03d369c914800e9c247.svg",
+    "static/media/trend-up.svg": "/react-lesson-frontend/static/media/trend-up.53e904f9f7939cc04433764939e93b33.svg",
+    "index.html": "/react-lesson-frontend/index.html",
+    "main.71fdfab2.css.map": "/react-lesson-frontend/static/css/main.71fdfab2.css.map",
+    "main.8de79511.js.map": "/react-lesson-frontend/static/js/main.8de79511.js.map",
+    "787.cda612ba.chunk.js.map": "/react-lesson-frontend/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71fdfab2.css",
+    "static/js/main.8de79511.js"
+  ]
+}
