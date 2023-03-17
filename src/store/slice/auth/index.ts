@@ -4,8 +4,8 @@ import { IAuthState, IPublicUser } from '../../../common/types/auth'
 
 const initialState: IAuthState = {
     user: {
-        user: {} as IPublicUser,
         token: '',
+        user: {} as IPublicUser,
     },
     isLogged: false,
     isLoading: false,

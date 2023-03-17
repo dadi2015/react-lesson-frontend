@@ -3,11 +3,9 @@ import axios from 'axios'
 const token = sessionStorage.getItem('token')
 
 export const instance = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: `${process.env.REACT_APP_BACKEND_URL}`,
     timeout: 1000,
-    headers: {
-        'X-Custom-Header': 'foobar',
-    },
+    headers: {},
 })
 
 export const newsInstance = axios.create({
@@ -16,7 +14,7 @@ export const newsInstance = axios.create({
 })
 
 export const instanceAuth = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: `${process.env.REACT_APP_BACKEND_URL}`,
     timeout: 1000,
     headers: {
         'X-Custom-Header': 'foobar',

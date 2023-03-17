@@ -36,8 +36,8 @@ const SidebarComponent: FC<ISidebarProps> = (
     }, [pathname])
 
     const handleLogout = () => {
-        sessionStorage.removeItem('token')
         sessionStorage.removeItem('name')
+        sessionStorage.removeItem('token')
         navigate('/login')
     }
 

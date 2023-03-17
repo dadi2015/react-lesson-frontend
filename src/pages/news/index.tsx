@@ -10,7 +10,7 @@ const NewsPage: FC = (): JSX.Element => {
     const classes = useStyles()
 
     const renderNewsBlock = news.map((element: any) => (
-        <Grid container className={classes.newsBlock}>
+        <Grid container className={classes.newsBlock} key={element.id}>
             <Grid item xs={12} md={3}>
                 <img src={element.imageurl} alt={element.category} />
             </Grid>
